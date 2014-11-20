@@ -85,3 +85,15 @@ function onMarkerClick () {
 	map.panTo(this.getPosition());
 	infoWin.open(map, this);
 }
+
+$.getJSON('http://data.seattle.gov/resource/65fc-btcc.json')
+	.done(function(data) {
+		//success
+		console.log(data);
+	})
+	.fail(function(error){
+		//error contains error info
+	})
+	.always(function() {
+		//called on either success or error cases
+	})
